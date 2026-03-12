@@ -1,0 +1,120 @@
+
+:root {
+    --netflix-red: #E50914;
+    --bg-black: #141414;
+    --text-white: #FFFFFF;
+    --text-gray: #b3b3b3;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.book-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    background: #000;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+/* Page Layout */
+.page {
+    flex: 1;
+    min-height: 80vh;
+}
+
+/* Left Page Specifics */
+.left-page {
+    border-right: 1px solid #333;
+    padding-right: 20px;
+    background: linear-gradient(to bottom, rgba(151, 58, 153, 0.2), rgba(0,0,0,0.8)), 
+                url('red.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.logo { width: 120px; margin-bottom: 10px; }
+.series-tag { color: var(--text-gray); letter-spacing: 4px; font-size: 0.8rem; margin: 0; }
+.main-title { font-size: 5rem; margin: 0; line-height: 1; }
+.sub-title { font-size: 1.5rem; color: var(--text-gray); font-weight: 300; margin-bottom: 20px; }
+
+.play-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.info-btn {
+    background: rgba(109, 109, 110, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.my-list-section { margin-top: 40px; }
+.thumb-link {
+    text-decoration: none; /* Removes underline from text */
+    color: red;        /* Keeps text color the same as your design */
+    display: block;       /* Ensures the link covers the whole thumbnail area */
+}
+
+/* Optional: Add a slight hover effect so users know it's clickable */
+.thumb-link:hover .thumb {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Right Page Specifics */
+.right-page {
+    padding-left: 20px;
+}
+
+.episode-header { font-size: 2.5rem; text-transform: uppercase; line-height: 0.9; margin-bottom: 40px; }
+.episode-header span { color: var(--netflix-red); }
+
+.episode-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.episode-thumb {
+    width: 150px;
+    height: 85px;
+    background-color: #333;
+    border-radius: 4px;
+    flex-shrink: 0;
+    background-size: cover;
+}
+
+.episode-details h3 { margin: 0; font-size: 1rem; }
+.duration { color: var(--text-gray); font-size: 0.8rem; }
+.episode-details p { color: var(--text-gray); font-size: 0.85rem; line-height: 1.4; }
+
+/* Responsive for Mobile */
+@media (max-width: 800px) {
+    .book-container { flex-direction: column; padding: 15px; }
+    .left-page { border-right: none; border-bottom: 1px solid #333; padding-bottom: 40px; }
+    .main-title { font-size: 3rem; }
+}

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAYLISt</title>
+    <link rel="stylesheet" href="spotify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <a href="netflix.html" class="back-btn">BACK</a>
+     <a href="future.html" class="next-btn">NEXT</a>
+</head>
+<body>
+
+<div class="playlist-container">
+    <header class="playlist-header">
+        <img src="3.jpg" alt="Playlist Cover" class="cover-image">
+        <div class="playlist-info">
+            <h1 class="playlist-title">🎀 memories 🎀</h1>
+            <div class="playlist-meta">
+                <span class="owner">kylie's playlist</span> • 3h 11m
+            </div>
+        </div>
+    </header>
+
+    <div class="controls">
+        <div class="left-controls">
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+            <i class="far fa-heart icon"></i>
+            <i class="fas fa-arrow-down-circle icon"></i>
+            <i class="fas fa-user-plus icon"></i>
+            <i class="fas fa-ellipsis-h icon"></i>
+        </div>
+        <div class="right-controls">
+            <i class="fas fa-search icon"></i>
+            <span class="sort">Custom order <i class="fas fa-caret-down"></i></span>
+        </div>
+    </div>
+
+    <div class="song-list">
+        <div class="song-row">
+            <div class="song-details">
+                <span class="song-name">thinking about you</span>
+               <span class="artist-name"><span class="explicit">E</span> frank</span>
+            </div>
+        </div>
+
+        <div class="song-row">
+            <div class="song-details">
+                <span class="song-name">i wanna be yours</span>
+                <span class="artist-name"><span class="explicit">E</span> artic monkeys</span>
+            </div>
+        </div>
+
+        <div class="song-row">
+            <div class="song-details">
+                <span class="song-name">rewrite the stars</span>
+               <span class="artist-name"><span class="explicit">E</span> zendaya</span>
+            </div>
+        </div>
+
+        <div class="song-row">
+            <div class="song-details">
+                <audio id="myAudio">
+  <source src="I Wanna Be Yours - Arctic Monkeys.mp3" type="audio/mpeg">
+                <span class="song-name">forever</span>
+                 <span class="artist-name"><span class="explicit">E</span> lewis capaldi</span>
+                
+            </audio>
+            </div>
+        </div>
+
+        <div class="song-row">
+            <div class="song-details">
+                <span class="song-name">bad dreams</span>
+              <span class="artist-name"><span class="explicit">E</span> faouzia</span>
+            </div>
+        </div>
+
+        <div class="song-row">
+            <div class="song-details">
+                <span class="song-name">snowman</span>
+                 <span class="artist-name"><span class="explicit">E</span> sia</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src ="spotify.js"></script>
+</body>
+</html>

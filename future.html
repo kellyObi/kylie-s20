@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylie's Future Era</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Oswald:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+     <a href="spotify.html" class="back-btn">BACK</a>
+      <a href="tf.html" class="next-btn">NEXT</a>
+    <style>
+
+        .back-btn {
+    position:absolute;
+    top:20px;
+    left:20px;
+    background-color:#d99c9c ;
+    color: rgb(241, 239, 243);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.next-btn {
+    position:absolute;
+    top:20px;
+    right:20px;
+    background-color: #d99c9c ;
+    color: rgb(239, 235, 243);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+        :root {
+            --bg-color: #fdfaf5; /* Creamy paper texture color */
+            --accent-pink: #d99c9c;
+            --text-black: #1a1a1a;
+        }
+
+        body {
+            background-color: #ddd; /* Desk/background color */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Container for the two-page spread */
+        .magazine-spread {
+            display: flex;
+            width: 90%;
+            max-width: 1000px;
+            background: var(--bg-color);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        /* Center fold line */
+        .magazine-spread::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .page {
+            flex: 1;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        /* LEFT PAGE STYLES */
+        .header-main {
+            font-family: 'UnifrakturMaguntia', serif; /* Blackletter font */
+            font-size: 3.5rem;
+            color: var(--accent-pink);
+            margin: 0;
+            border-bottom: 2px solid var(--accent-pink);
+            display: inline-block;
+            padding-right: 50px;
+        }
+
+        .sub-header {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            color: var(--accent-pink);
+            font-size: 1.8rem;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .image-collage {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .collage-img {
+            height: 150px;
+            flex: 1;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #ddd;
+        }
+
+        .story-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-black);
+            text-align: justify;
+        }
+
+        .footer-tagline {
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* RIGHT PAGE STYLES */
+        .page-right {
+            background-image: url('child2.jpg'); /* Replace with child photo */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding: 30px;
+        }
+
+        .number-21 {
+            font-size: 10rem;
+            font-weight: bold;
+            color: rgba(217, 156, 156, 0.4); /* Rosy balloon color effect */
+            margin: 0;
+            line-height: 1;
+        }
+
+        .balloons {
+            position: absolute;
+            right: 10px;
+            top: 150px;
+            width: 150px;
+            opacity: 0.8;
+        }
+
+        /* Responsive Fix for mobile */
+        @media (max-width: 800px) {
+            .magazine-spread { flex-direction: column; }
+            .magazine-spread::after { display: none; }
+            .page-right { height: 500px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="magazine-spread">
+        <div class="page">
+
+            <h1 class="header-main">Kylie in a few years</h1>
+            <h2 class="sub-header">KYLIE'S FUTURE ERA</h2>
+            
+            <div class="image-collage">
+                <div class="collage-img" style="background-image: url('child1.jpg');"></div>
+                <div class="collage-img" style="background-image: url('child2.jpg');"></div>
+                <div class="collage-img" style="background-image: url('child.jpg');"></div>
+            </div>
+
+            <div class="story-text">
+                Fast forward to a few years later  and kylie? Oh, she's that DOCTOR now — the one people name-drop like she's a landmark. She's in america, obviously. The kind of apartment with huge windows, skyline views, and a kitchen she barely uses because she's always booked, busy, or being iconic. Her life smells like fresh peonies, new leather bags, and whatever luxury candle she bulk orders when she "accidentally" works past midnight again.
+                <br><br>
+                Then one day,she sits on the balcony with a smoothie in hands and she has flashbacks; from when she was academically perfect in the early secondary to when she lost her spark ,to the mental health issues, to the people that supported her and brought her to where she is today.She looks around her,she's living her dreams and in that moment,tears roll down her eyes,tears full of gratitude and thanksgiving
+                <br><br>
+                she works now. life has changed,she saves lives and she could not be more Grateful
+            </div>
+
+            <div class="footer-tagline">
+                THIS IS KYLIE IN HER FUTURE ERA:<br>
+                COFEE IN HAND, OUTFIT ON POINT, PEACE SECURED
+            </div>
+        </div>
+
+        <div class="page page-right">
+            <div class="number-21">from 2 to 20</div>
+            </div>
+    </div>
+
+</body>
+</html>

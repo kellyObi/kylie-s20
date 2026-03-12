@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAYY</title>
+    <style>
+        /* 1. YOUR ORIGINAL LAYOUT STYLES */
+        body {
+            background-color: #000;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .profile-container {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .profile-container:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 3px solid transparent;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        .profile-container:hover .profile-img {
+            border-color: white;
+        }
+
+        .profile-name {
+            color: #808080;
+            font-size: 1.5rem;
+        }
+
+        .manage-btn {
+            margin-top: 60px;
+            padding: 10px 30px;
+            background: transparent;
+            color: #808080;
+            border: 1px solid #808080;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        /* 2. THE ANIMATION OVERLAY (INVISIBLE UNTIL CLICKED) */
+        #netflix-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+
+        .zoom-animation {
+            color: #E50914;
+            font-size: 15rem;
+            font-weight: bold;
+            animation: netflix-zoom 1.5s ease-in forwards;
+        }
+
+        @keyframes netflix-zoom {
+            0% { transform: scale(0.5); opacity: 0; }
+            20% { opacity: 1; transform: scale(1); }
+            100% { transform: scale(20); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Who's watching?</h1>
+
+    <div class="profile-container" onclick="playNetflixIntro()">
+        <img src="profile.jpeg" alt="kyky" class="profile-img">
+        <div class="profile-name">kyky</div>
+    </div>
+
+    <button class="manage-btn">Manage Profiles</button>
+
+    <div id="netflix-overlay">
+        <div id="anim-letter" class="">K</div>
+    </div>
+
+    <audio id="ta-dum" src="https://www.myinstants.com/media/sounds/netflix-ta-dum-sound-effect.mp3"></audio>
+
+    <script>
+        function playNetflixIntro() {
+            const overlay = document.getElementById('netflix-overlay');
+            const letter = document.getElementById('anim-letter');
+            const audio = document.getElementById('ta-dum');
+
+            // Show the black layer
+            overlay.style.display = 'flex';
+            
+            // Play the "Ta-dum" sound
+            audio.play().catch(error => console.log("Audio play failed:", error));
+
+            // Start the zoom effect
+            letter.classList.add('zoom-animation');
+
+            // Redirect after the animation finishes
+            setTimeout(() => {
+                window.location.href = "netflix.html"; 
+            }, 1500);
+        }
+    </script>
+
+</body>
+</html>
